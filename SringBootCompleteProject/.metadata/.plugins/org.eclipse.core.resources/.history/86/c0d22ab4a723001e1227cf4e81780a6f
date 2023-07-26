@@ -1,0 +1,5 @@
+package com.springBoot.OrderService.Entity;
+
+public class Order {
+
+}

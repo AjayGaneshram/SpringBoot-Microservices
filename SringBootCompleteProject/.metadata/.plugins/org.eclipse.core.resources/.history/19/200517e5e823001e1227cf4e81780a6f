@@ -1,0 +1,5 @@
+package com.springBoot.OrderService.config;
+
+public class FeignConfig {
+
+}

@@ -1,0 +1,12 @@
+package com.practiceSpring.ProductService.Service;
+
+import com.practiceSpring.ProductService.Modal.ProductRequest;
+import com.practiceSpring.ProductService.Modal.ProductResponse;
+
+public interface ProductService {
+
+	long addProduct(ProductRequest productRequest);
+
+	ProductResponse getProductByID(long productId);
+
+}

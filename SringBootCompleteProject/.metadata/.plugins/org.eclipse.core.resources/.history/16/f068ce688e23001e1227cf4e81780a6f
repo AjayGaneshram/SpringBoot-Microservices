@@ -1,0 +1,5 @@
+package com.practiceSpring.ProductService.Exception;
+
+public class ProductServiceCustomException {
+
+}

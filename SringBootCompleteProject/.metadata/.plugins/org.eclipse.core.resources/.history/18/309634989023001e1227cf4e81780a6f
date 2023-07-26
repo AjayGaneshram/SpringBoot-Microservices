@@ -1,0 +1,21 @@
+package com.practiceSpring.ProductService.Exception;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+
+import com.practiceSpring.ProductService.Modal.ErrorResponse;
+import com.practiceSpring.ProductService.Modal.ProductResponse;
+
+@ControllerAdvice
+public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
+
+	@ExceptionHandler(ProductServiceCustomException.class)
+	public ResponseEntity<ErrorResponse> handleProductServiceExceptionHandler(ProductServiceCustomException exception){
+		return new ResponseEntity<>(new ErrorResponse().builder()
+				.errorMessage(exceptionObj.getMessage())
+				.errorCode(exceptionObj.geterrorCode())
+				);
+	}
+}

@@ -1,0 +1,5 @@
+package com.practiceSpring.ProductService.Modal;
+
+public class ErrorResponse {
+
+}
